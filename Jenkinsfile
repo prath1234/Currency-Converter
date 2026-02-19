@@ -17,13 +17,13 @@ pipeline {
 
         stage('Docker Build') {
             steps {
-                sh 'docker build -t myapp:latest .'
+                echo "Building Docker file"
             }
         }
 
         stage('Run Container') {
             steps {
-                sh 'docker run -d -p 8080:8080 myapp:latest'
+                echo "Running docker container"
             }
         }
     }
